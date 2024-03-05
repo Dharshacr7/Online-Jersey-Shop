@@ -107,6 +107,7 @@ section{
     padding: 2rem;
 
 }
+
 section .uefa h2{
     text-align: center;
     padding: 1rem;
@@ -118,14 +119,14 @@ section .product-box{
     gap: 1rem;
 }
 section .product-box img{
-    width: 150px;
+    width: 100%;
     height: 150px;
 }
 section .product-box:last-child img{
     width: 200px;
 }
 
-section .product-box .product{
+section .product-box .product {
     box-shadow: 0px 0px 10px grey;
     display: flex;
     flex-direction: column;
@@ -148,14 +149,170 @@ section .product-box .product .buttons .addToCart{
     border: 2px solid green;
     border-radius: 5px;
     background-color: rgba(187, 182, 182, 0.888);
+    transition: background-color .3s;
+}
+section .product-box .product .buttons .addToCart:hover{
+    background-color: lightgreen;
+}
+/* UEFA-PRODUCT-SECTION-END */
 
+
+/* ABOUT-SECTION-START */
+
+.about{
+    display: grid;
+    width: 100%;
+    height: 70vh;
+    grid-template-columns: 400px 400px 300px;
+    place-items: center;
+    gap: 5rem;
+    background-color: black;
+    color: whitesmoke;
+    
+}
+.about .greet{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.about .greet .customers{
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px grey;
+}
+.about .greet .customers h3{
+    color: gold;
+}
+.about .greet .customers i{
+    font-size: 20px;
+    color: white;
+}
+/* ABOUT-SECTION-END */
+
+
+/* FOOTER-SECTION-START */
+
+footer{
+    width: 100%;
+    background-color: antiquewhite;
+    height: 40vh;
+    display: grid;
+    place-items: center;
+    gap: 2rem;
+    grid-template-columns: repeat(4, 300px);
+}
+footer .works, .socials, .inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+footer a{
+    color: goldenrod;
+}
+footer input{
+    padding: 0.3rem;
+}
+footer .inputs button{
+    background-color: goldenrod;
+    border: none;
+    padding: 0.2rem;
+    border-radius: 4px;
 }
 
+/* FOOTER-SECTION-END */
+
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 468px){
+    .navbar{
+        width: 100%;
+        background-color: grey;
+    }
+    .navbar .links{
+        display: none;
+    }
+    .navbar .logo h1{
+        font-size: 18px;
+        animation: none;
+    }
+    main{
+        width: 100%;
+        background-image: none;
+        height: 50%;
+    }
+    main .overlay{
+        text-align: center;
+        height: fit-content;
+        margin-bottom: 0;
+        animation: none;
+        align-items: center;
+        padding: 0;
+        font-size: 10px;
+        background-color: transparent;
+        backdrop-filter: none;
+        transform: none;
+        text-align: center;
+        width: 100%;
+    }
+    section{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        margin-top: 15rem;
+    }
+    section .product-box{
+        grid-template-columns: repeat(1, 100%);
+        place-items: center;
+        width: 100%;
+    }
+    section .uefa h2{
+        display: none;
+    }
+    section .product:nth-of-type(6){
+        display: none;
+    }
+    section .product:nth-of-type(2){
+        display: none;
+    }
+    section .product:nth-of-type(4){
+        display: none;
+    }
+    section .product:nth-of-type(1){
+        display: none;
+    }
+    .about{
+        font-size: 14px;
+        place-items: center;
+        height: 100%;
+        text-align: center;
+        display: grid;
+        gap: 0;
+        padding: 0;
+        grid-template-rows: repeat(3, 350px);
+        grid-template-columns: repeat(1, 100%);
+    }
+    footer{
+        grid-template-rows: repeat(4, 150px);
+        grid-template-columns: repeat(1, 100%);
+        height: 100%;
+        text-align: center;
+        place-items: center;
+    }
+} 
 
 
 
 
-/* UEFA-PRODUCT-SECTION-END */
+
+
+
+
+
+
+
+
 
 
 /* ANIMATIONS */
